@@ -18,13 +18,13 @@ interface Metric {
 }
 
 
-const randomInRange = (min: any, max: any, decimals = 0) => {
+const randomInRange = (min: number, max: number, decimals = 0) => {
   const value = Math.random() * (max - min) + min;
   return decimals > 0 ? parseFloat(value.toFixed(decimals)) : Math.floor(value);
 };
 
 // Helper function to format numbers
-const formatNumber = (num: any, prefix = '', suffix = '') => {
+const formatNumber = (num: number, prefix = '', suffix = '') => {
   if (num >= 1000000) {
     return `${prefix}${(num / 1000000).toFixed(1)}M${suffix}`;
   } else if (num >= 1000) {
