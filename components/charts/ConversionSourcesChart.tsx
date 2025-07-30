@@ -9,7 +9,7 @@ interface ConversionSourcesChartProps {
 }
 
 
-const CustomTooltip = ({ active, payload, label }: any) => {
+const CustomTooltip = ({ active, payload }: any) => {
     if (active && payload && payload.length) {
         console.log(payload)
         return (
